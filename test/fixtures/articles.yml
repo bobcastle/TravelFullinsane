@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  text: MyText
+  destination: MyString
+  theme: MyString
+  duree: MyInteger
+  budget: MyInteger
+
+
+two:
+  title: MyString
+  text: MyText
+  destination: MyString
+  theme: MyString
+  duree: MyInteger
+  budget: MyInteger

@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+
+  <h1>Nouveau Récit</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Back', articles_path %>
+<% else %>
+    <li><%= link_to("Connexion", new_user_session_path) %></li>
+    <li><%= link_to("Inscription", new_user_registration_path) %></li>
+<% end %>

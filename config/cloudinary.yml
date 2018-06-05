@@ -1,0 +1,6 @@
+production:
+  cloud_name: "travelinspire"
+  api_key: "694725554523951"
+  api_secret: "v7iO5Ek_WsTypg6Wxl7GXo6teSw"
+  secure: true
+  cdn_subdomain: true

@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Full Insane Travel</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  </div>
+</nav>
+<br>
+
+<div class="container">
+
+<% if user_signed_in? %>
+
+  <h1>Listing articles</h1>
+  <br>
+
+  <%= link_to 'New article', new_article_path %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+  <% @articles.each do |article| %>
+    </tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </table>
+<% else %>
+
+  <h1>Listing articles</h1>
+  <li>
+    <%= link_to("Connexion", new_user_session_path) %>
+  </li>
+  <li>
+    <%= link_to("Inscription", new_user_registration_path) %>
+  </li>
+  </br>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+  <% @articles.each do |article| %>
+    </tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+    <% end %>
+  </table>
+<% end %>
+</div>
